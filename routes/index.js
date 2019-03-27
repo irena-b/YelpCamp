@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const User = require('../models/user');
-
+//root rout
 router.get('/', function (req, res) {
     res.render('landing')
 });
@@ -43,7 +43,7 @@ router.get('/logout', function(req, res){
     req.logout();
     res.redirect('/campgrounds')
 })
-//that is the function MIDLEWHERE to check if user is logged in=> now we can use it whenever it needed
+//that is the function MIDLEWaRE to check if user is logged in=> now we can use it whenever it needed
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
         return next()

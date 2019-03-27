@@ -13,7 +13,7 @@ const commentRoutes = require('./routes/comments'),
     campgroundRoutes = require('./routes/campground'),
     indexRoutes = require('./routes/index');
 
-seedDB();
+// seedDB(); //seed the database
 
 mongoose.connect('mongodb://localhost:27017/yelp_camp', {
     useNewUrlParser: true
